@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import { TypographyLarge, TypographyMuted } from "./typography";
+import { cn } from "src/lib/utils.ts";
+const { imageSrc, imageClass, alt, title, description } = Astro.props;
+
+const imageClasses = cn("h-52 w-auto max-w-none", imageClass);
+---
+
+<div class="border rounded-lg overflow-hidden shadow-sm">
+  <div class="flex justify-center">
+    <Image src={imageSrc} alt={alt} class={imageClasses} />
+  </div>
+  <div class="p-4 flex flex-col gap-2">
+    <TypographyLarge>{title}</TypographyLarge>
+    <TypographyMuted className="line-clamp-4 h-20"
+      >{description}</TypographyMuted
+    >
+    <div class="flex flex-wrap gap-2 mt-2">
+      <slot />
+    </div>
+  </div>
+</div>

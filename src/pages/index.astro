@@ -1,0 +1,125 @@
+---
+import "@/styles/global.css";
+import { TypographyH1, TypographyLead } from "../components/typography";
+import { Badge } from "@/components/ui/badge";
+import CardProject from "../components/CardProject.astro";
+import tredCover from "../../src/images/tred/cover.png";
+import rhizeCover from "../../src/images/rhize/cover.png";
+import jsonataStudioCover from "../../src/images/jsonata-studio/cover.png";
+import kalendaraCover from "../../src/images/kalendara/cover.png";
+import weatherAppCover from "../../src/images/weather-app/cover.png";
+import recipeAppCover from "../../src/images/recipe-app/cover.jpg";
+---
+
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <body>
+    <section class="h-[80vh] flex items-center justify-center">
+      <div class="px-4 h-4/5 flex flex-col items-center justify-center gap-8">
+        <TypographyH1 className="font-bold">VLAD DIMOV</TypographyH1>
+        <TypographyLead className="text-center max-w-3xl"
+          >A full-stack software developer with advanced knowledge in building
+          modern web applications with Typescript and React, and robust servers
+          with Node and Go.</TypographyLead
+        >
+        <button class="bg-black text-white py-2 px-4 rounded-md mt-4"
+          ><a href="mailto:devdimov@proton.me">Send email</a></button
+        >
+      </div>
+    </section>
+    <section class="mb-20">
+      <div
+        class="mx-auto grid grid-cols-1 sm:grid-cols-3 sm:max-w-7xl gap-12 px-4 sm:px-0"
+      >
+        <CardProject
+          imageSrc={tredCover}
+          imageClass="py-4"
+          alt="Tred project cover image"
+          title="Tred Earth"
+          description="A mobile banking app that allows users and businesses to monitor and understand the impact their spending has on the environment."
+        >
+          <Badge variant="outline" className="">Typescript</Badge>
+          <Badge variant="outline">React Native</Badge>
+          <Badge variant="outline">PostgreSQL</Badge>
+          <Badge variant="outline">Detox</Badge>
+          <Badge variant="outline">Jest</Badge>
+          <Badge variant="outline">Git</Badge>
+          <Badge variant="outline">AWS</Badge>
+        </CardProject>
+        <CardProject
+          imageSrc={rhizeCover}
+          imageClass="py-2"
+          alt="Rhize project cover image"
+          title="Rhize"
+          description="Rhize is a data hub that collects, stores, integrates, and processes data from a manufacturing system."
+        >
+          <Badge variant="outline">Typescript</Badge>
+          <Badge variant="outline">React</Badge>
+          <Badge variant="outline">Go</Badge>
+          <Badge variant="outline">GraphQL</Badge>
+          <Badge variant="outline">Docker</Badge>
+          <Badge variant="outline">Cypress</Badge>
+          <Badge variant="outline">Grafana</Badge>
+        </CardProject>
+        <CardProject
+          imageSrc={jsonataStudioCover}
+          alt="JSONata Studio cover image"
+          title="JSONata Studio"
+          description="A code editing app for transforming JSON structures and debugging JSONata expressions in a browser with instant feedback."
+        >
+          <Badge variant="outline">Typescript</Badge>
+          <Badge variant="outline">Next.js</Badge>
+          <Badge variant="outline">Tailwind CSS</Badge>
+          <Badge variant="outline">Monaco Editor</Badge>
+          <Badge variant="outline">Jest</Badge>
+          <Badge variant="outline">Markdown</Badge>
+          <Badge variant="outline">AWS</Badge>
+        </CardProject>
+        <CardProject
+          imageSrc={kalendaraCover}
+          alt="Kalendara cover image"
+          title="Kalendara"
+          description="A customisable calendar app for managing and visualising your schedule."
+        >
+          <Badge variant="outline">Typescript</Badge>
+          <Badge variant="outline">React</Badge>
+          <Badge variant="outline">Tailwind CSS</Badge>
+          <Badge variant="outline">GraphQL</Badge>
+          <Badge variant="outline">Auth0</Badge>
+          <Badge variant="outline">Zod</Badge>
+          <Badge variant="outline">Jest</Badge>
+          <Badge variant="outline">Cypress</Badge>
+          <Badge variant="outline">shadcn</Badge>
+        </CardProject>
+        <CardProject
+          imageSrc={weatherAppCover}
+          alt="Weather app cover image"
+          title="Weather App"
+          description="A minimalist feature-rich weather app serving data from the OpenWeather API."
+        >
+          <Badge variant="outline">HTML</Badge>
+          <Badge variant="outline">CSS</Badge>
+          <Badge variant="outline">JavaScript</Badge>
+          <Badge variant="outline">React</Badge>
+          <Badge variant="outline">Express.js</Badge>
+          <Badge variant="outline">Figma</Badge>
+        </CardProject>
+        <CardProject
+          imageSrc={recipeAppCover}
+          alt="Recipe app cover image"
+          title="Recipe App"
+          description="A recipe app for storing favourite recipes in one place."
+        >
+          <Badge variant="outline">HTML</Badge>
+          <Badge variant="outline">CSS</Badge>
+          <Badge variant="outline">JavaScript</Badge>
+          <Badge variant="outline">React</Badge>
+          <Badge variant="outline">MongoDB</Badge>
+          <Badge variant="outline">Express.js</Badge>
+          <Badge variant="outline">AWS S3</Badge>
+          <Badge variant="outline">AWS Elastic Beanstalk</Badge>
+        </CardProject>
+      </div>
+    </section>
+  </body>
+</html>
