@@ -1,23 +1,48 @@
 ---
 import { Image } from "astro:assets";
 import { TypographyLarge, TypographyMuted } from "./typography";
+import Badges from "./Badges";
 import { cn } from "src/lib/utils.ts";
-const { imageSrc, imageClass, alt, title, description } = Astro.props;
+
+interface Props {
+  href: string;
+  imageMeta: ImageMetadata;
+  imageClass?: string;
+  alt?: string;
+  title: string;
+  description: string;
+  tools: { name: string }[];
+  categories: { name: string }[];
+}
+const {
+  href,
+  imageMeta,
+  imageClass,
+  alt,
+  title,
+  description,
+  tools,
+  categories,
+} = Astro.props;
 
 const imageClasses = cn("h-52 w-auto max-w-none", imageClass);
 ---
 
-<div class="border rounded-lg overflow-hidden shadow-sm">
+<a
+  class="border rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+  href={href}
+>
   <div class="flex justify-center">
-    <Image src={imageSrc} alt={alt} class={imageClasses} />
+    <Image src={imageMeta} alt={alt} class={imageClasses} />
   </div>
   <div class="p-4 flex flex-col gap-2">
     <TypographyLarge>{title}</TypographyLarge>
     <TypographyMuted className="line-clamp-4 h-20"
       >{description}</TypographyMuted
     >
-    <div class="flex flex-wrap gap-2 mt-2">
-      <slot />
+    <Badges items={categories} title="Category" />
+    <div class="mt-2">
+      <Badges items={tools} title="Technologies" />
     </div>
   </div>
-</div>
+</a>

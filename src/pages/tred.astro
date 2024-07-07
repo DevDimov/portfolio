@@ -1,0 +1,43 @@
+---
+import BaseLayout from "@/layouts/Base.astro";
+import ProjectLayout from "@/layouts/Project.astro";
+import { TypographyH2, TypographyP } from "@/components/typography";
+import tredCover from "../images/tred/cover.png";
+---
+
+<BaseLayout title="Project Tred | Vlad Dimov">
+  <ProjectLayout imageMeta={tredCover} alt="Tred mobile app" imageClass="p-8">
+    <TypographyH2>About Tred</TypographyH2>
+    <TypographyP
+      >Tred is mobile banking app that allows users and businesses to monitor
+      and understand the impact their spending has on the environment.</TypographyP
+    >
+    <TypographyH2>My role</TypographyH2>
+    <TypographyP
+      >I was a Software Developer Intern at Tred from October 2022 to April
+      2023.</TypographyP
+    >
+    <TypographyH2>My tasks</TypographyH2>
+    <ul class="list-disc pl-8">
+      <li>
+        Built new components with React Native and Typescript, and extended
+        existing ones
+      </li>
+      <li>
+        Wrote end-to-end tests for a cross-platform mobile app with Detox, and
+        unit tests with Jest
+      </li>
+      <li>
+        Queried, updated and inserted data in a PostgreSQL database with TypeORM
+      </li>
+      <li>
+        Tracked file changes with Git and pushed code to multiple branches
+      </li>
+      <li>
+        Worked on setting up a Detox CI pipeline with GitHub Actions to automate
+        tests
+      </li>
+      <li>Got exposed to EC2, Lambda, CloudWatch and Cognito in AWS</li>
+    </ul>
+  </ProjectLayout>
+</BaseLayout>

@@ -1,0 +1,64 @@
+---
+import BaseLayout from "@/layouts/Base.astro";
+import ProjectLayout from "@/layouts/Project.astro";
+import { TypographyH2, TypographyP } from "@/components/typography";
+import rhizeCover from "../images/rhize/cover.png";
+---
+
+<BaseLayout title="Project Rhize | Vlad Dimov">
+  <ProjectLayout
+    imageMeta={rhizeCover}
+    alt="Rhize desktop app"
+    imageClass="p-4"
+  >
+    <TypographyH2>About Rhize</TypographyH2>
+    <TypographyP
+      >Rhize is a data hub that collects, stores, integrates, and processes data
+      from a manufacturing system.</TypographyP
+    >
+    <TypographyH2>My role</TypographyH2>
+    <TypographyP
+      >I was a Graduate Software Engineer at Rhize from April 2023 to May 2024.</TypographyP
+    >
+    <TypographyH2>My tasks</TypographyH2>
+    <ul class="list-disc pl-8">
+      <li>
+        Delivered an MVP comprising 8 APIs and associated workflows that collect
+        and process data from watch assembly operations
+      </li>
+      <li>
+        Transformed data with JSONata to comply with the ISA-95 model and allow
+        for ultimate observability and traceability of various manufacturing
+        processes
+      </li>
+      <li>
+        Developed new features and tests on the back-end using Golang and
+        GraphQL
+      </li>
+      <li>
+        Developed integration tests with Node and Cypress for a React-GraphQL
+        app
+      </li>
+      <li>
+        Implemented GraphQL operations for a Dgraph database using Apollo Client
+      </li>
+      <li>
+        Automated E2E tests by configuring a CI/CD pipeline in GitLab to run
+        tests in parallel and send the results to Cypress Cloud for advanced
+        analytics
+      </li>
+      <li>
+        Built a service that published messages to an MQTT server with Node.js
+        and Express.js
+      </li>
+      <li>
+        Gained exposure to authentication with Keycloak and developing
+        components with Storybook
+      </li>
+      <li>
+        Composed multi-service containers with Docker for testing and debugging
+      </li>
+      <li>Analysed logs and traces with Grafana</li>
+    </ul>
+  </ProjectLayout>
+</BaseLayout>

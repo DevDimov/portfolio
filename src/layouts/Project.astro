@@ -1,0 +1,25 @@
+---
+import { cn } from "@/lib/utils";
+import { Image } from "astro:assets";
+
+interface Props {
+  imageMeta: ImageMetadata;
+  imageClass?: string;
+  alt?: string;
+}
+
+const { imageMeta, alt, imageClass } = Astro.props;
+
+const imageClasses = cn("h-full w-auto max-w-none", imageClass);
+---
+
+<div>
+  <div class="h-[60vh] flex justify-center items-center mb-8">
+    <Image src={imageMeta} alt={alt} class={imageClasses} />
+  </div>
+  <div class="flex flex-col justify-center items-center mb-40">
+    <article class="max-w-3xl px-4 mb-12">
+      <slot />
+    </article>
+  </div>
+</div>

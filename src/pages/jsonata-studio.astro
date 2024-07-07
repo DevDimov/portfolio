@@ -1,0 +1,53 @@
+---
+import BaseLayout from "@/layouts/Base.astro";
+import ProjectLayout from "@/layouts/Project.astro";
+import { TypographyH2, TypographyP } from "@/components/typography";
+import jsonataStudioCover from "../images/jsonata-studio/cover.png";
+---
+
+<BaseLayout title="Project JSONata Studio | Vlad Dimov">
+  <ProjectLayout
+    imageMeta={jsonataStudioCover}
+    alt="JSONata Studio code editor desktop app"
+    imageClass="p-2"
+  >
+    <TypographyH2>About JSONata Studio</TypographyH2>
+    <TypographyP
+      >A code editing app for transforming JSON structures and debugging JSONata
+      expressions in a browser with instant feedback.</TypographyP
+    >
+    <TypographyP
+      >Available at <a
+        href="https://www.jsonatastudio.com/"
+        class="underline text-blue-500">www.jsonatastudio.com</a
+      >.</TypographyP
+    >
+    <TypographyH2>My role</TypographyH2>
+    <TypographyP
+      >I have been working on this project as a Full-Stack Software Developer
+      since May 2024.</TypographyP
+    >
+    <TypographyH2>Learning objectives</TypographyH2>
+    <ul class="list-disc pl-8">
+      <li>
+        Utilise Next.js, Monaco Editor and Tailwind CSS to build a playground
+        for evaluating and debugging JSONata expressions against a JSON input
+        with instant feedback
+      </li>
+      <li>
+        Integrate a JSONata code editor with a custom theme, language, syntax
+        highlighting and syntax validation
+      </li>
+      <li>
+        Set up routing with Next's app directory and utilise server-side
+        rendering
+      </li>
+      <li>Implement authentication with AWS Cognito and the Amplify library</li>
+      <li>Create public and protected APIs with Route Handlers</li>
+      <li>
+        Utilise Remark and Rehype to publish a blog with articles written in
+        Markdown
+      </li>
+    </ul>
+  </ProjectLayout>
+</BaseLayout>

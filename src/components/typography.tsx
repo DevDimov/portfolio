@@ -15,12 +15,31 @@ export function TypographyH1({
   return (
     <h1
       className={cn(
-        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+        "scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl",
         className
       )}
     >
       {children}
     </h1>
+  );
+}
+
+export function TypographyH2({
+  children,
+  className,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <h2
+      className={cn(
+        "scroll-m-20 mt-6 mb-2 text-3xl font-semibold tracking-tight first:mt-0",
+        className
+      )}
+    >
+      {children}
+    </h2>
   );
 }
 
@@ -38,7 +57,7 @@ export function TypographyP({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <p className={clsx("leading-7", className)}>{children}</p>;
+  return <p className={clsx("leading-7 mt-2", className)}>{children}</p>;
 }
 
 export function TypographyLead({
